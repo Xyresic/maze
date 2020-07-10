@@ -78,8 +78,8 @@ int main() {
         int index = distribution(engine);
         int wall = walls[index];
         if (wall < h_offset) {
-            int offset = wall / (width - 1);
-            if (check(wall + offset, wall + offset + 1,mst)) {
+            int left = wall + wall / (width - 1);
+            if (check(left, left + 1,mst)) {
                 destroyed_walls.push_back(wall);
             }
         } else {
